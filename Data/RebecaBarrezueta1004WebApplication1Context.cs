@@ -15,5 +15,7 @@ namespace RebecaBarrezueta1004WebApplication1.Data
         }
 
         public DbSet<RebecaBarrezueta1004WebApplication1.Models.Burguer> Burguer { get; set; } = default!;
+        public DbSet<RebecaBarrezueta1004WebApplication1.Models.Promo> Promo { get; set; } = default!;
+
     }
 }

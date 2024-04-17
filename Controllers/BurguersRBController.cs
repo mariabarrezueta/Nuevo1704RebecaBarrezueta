@@ -10,22 +10,22 @@ using RebecaBarrezueta1004WebApplication1.Models;
 
 namespace RebecaBarrezueta1004WebApplication1.Controllers
 {
-    public class BurguersController : Controller
+    public class BurguersRBController : Controller
     {
         private readonly RebecaBarrezueta1004WebApplication1Context _context;
 
-        public BurguersController(RebecaBarrezueta1004WebApplication1Context context)
+        public BurguersRBController(RebecaBarrezueta1004WebApplication1Context context)
         {
             _context = context;
         }
 
-        // GET: Burguers
+        // GET: BurguersRB
         public async Task<IActionResult> Index()
         {
             return View(await _context.Burguer.ToListAsync());
         }
 
-        // GET: Burguers/Details/5
+        // GET: BurguersRB/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,13 +43,13 @@ namespace RebecaBarrezueta1004WebApplication1.Controllers
             return View(burguer);
         }
 
-        // GET: Burguers/Create
+        // GET: BurguersRB/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Burguers/Create
+        // POST: BurguersRB/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -65,7 +65,7 @@ namespace RebecaBarrezueta1004WebApplication1.Controllers
             return View(burguer);
         }
 
-        // GET: Burguers/Edit/5
+        // GET: BurguersRB/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,7 +81,7 @@ namespace RebecaBarrezueta1004WebApplication1.Controllers
             return View(burguer);
         }
 
-        // POST: Burguers/Edit/5
+        // POST: BurguersRB/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -116,7 +116,7 @@ namespace RebecaBarrezueta1004WebApplication1.Controllers
             return View(burguer);
         }
 
-        // GET: Burguers/Delete/5
+        // GET: BurguersRB/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +134,7 @@ namespace RebecaBarrezueta1004WebApplication1.Controllers
             return View(burguer);
         }
 
-        // POST: Burguers/Delete/5
+        // POST: BurguersRB/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
